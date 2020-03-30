@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+     <div class="container">
+     
+       <div class="row">
+       <div class="input-field col s6">
+          <input disabled id="input0" type="text" class="validate">
+          <label for="input0">Amount</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input1" type="text" class="validate">
+          <label for="input1">Job No.</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input2" type="text" class="validate">
+          <label for="input2">Date</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input3" type="text" class="validate">
+          <label for="input3">Import Duty by ctg cash/bank</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input4" type="text" class="validate">
+          <label for="input4">Import Duty by office pay order</label>
+        </div><div class="input-field col s6">
+          <input id="input5" type="text" class="validate">
+          <label for="input5">Shipping Agent PO Commission</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input6" type="text" class="validate">
+          <label for="input6">Wharf rent/ Charges-1</label>
+        </div><div class="input-field col s6">
+          <input id="input7" type="text" class="validate">
+          <label for="input7">Wharf rent/ Charges-2</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input8" type="text" class="validate">
+          <label for="input8">Freight Forwarder NOC Charges</label>
+        </div><div class="input-field col s6">
+          <input id="input9" type="text" class="validate">
+          <label for="input9">Shipping Agent Charges-1</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input10" type="text" class="validate">
+          <label for="input10">Shipping Agent Charges-2</label>
+        </div><div class="input-field col s6">
+          <input id="input11" type="text" class="validate">
+          <label for="input11">Shipping Agent Charges-3</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input12" type="text" class="validate">
+          <label for="input12">Servay Charges-1</label>
+        </div><div class="input-field col s6">
+          <input id="input13" type="text" class="validate">
+          <label for="input13">Servay Charges-2</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input14" type="text" class="validate">
+          <label for="input14">Depu Charges</label>
+        </div><div class="input-field col s6">
+          <input id="input15" type="text" class="validate">
+          <label for="input15">Container Seal</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input16" type="text" class="validate">
+          <label for="input16">CnF Assoation Fees</label>
+        </div><div class="input-field col s6">
+          <input id="input17" type="text" class="validate">
+          <label for="input17">Labour Expenses/ Loading-unloading</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input18" type="text" class="validate">
+          <label for="input18">Kallan Tahbill charges</label>
+        </div><div class="input-field col s6">
+          <input id="input19" type="text" class="validate">
+          <label for="input19">B/L Verify charges</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input20" type="text" class="validate">
+          <label for="input20">Entertainment1)</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input21" type="text" class="validate">
+          <label for="input21">Entertainment2</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input22" type="text" class="validate">
+          <label for="input22">Entertainment3</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="input23" type="text" class="validate">
+          <label for="input23">Entertainment4</label>
+        </div>
+        
+        <div class="input-field col s6">
+          <button class="btn waves-effect waves-light" id="btn">Add
+              <i class="material-icons right">send</i>
+          </button>         
+        </div>
+      </div> 
+     
+     </div>
+     
+     
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+        var input1Box = document.getElementById("input1");
+        var input2Box = document.getElementById("input2");
+        var input3Box = document.getElementById("input3");
+        var input4Box = document.getElementById("input4");
+        var input5Box = document.getElementById("input5");
+        var input6Box = document.getElementById("input6");
+        var input7Box = document.getElementById("input7");
+        var input8Box = document.getElementById("input8");
+        var input9Box = document.getElementById("input9");
+        var input10Box = document.getElementById("input10");
+        var input11Box = document.getElementById("input11");
+        var input12Box = document.getElementById("input12");
+        var input13Box = document.getElementById("input13");
+        var input14Box = document.getElementById("input14");
+        var input15Box = document.getElementById("input15");
+        var input16Box = document.getElementById("input16");
+        var input17Box = document.getElementById("input17");
+        var input18Box = document.getElementById("input18");
+        var input19Box = document.getElementById("input19");
+        var input20Box = document.getElementById("input20");
+        var input21Box = document.getElementById("input21");
+        var input22Box = document.getElementById("input22");
+        var input23Box = document.getElementById("input23");
+        document.getElementById("btn").addEventListener("click", addRecord);
+        
+        
+        
+        function addRecord(){
+                var data = {
+                    info1: input1Box.value,
+                    info2: input2Box.value,
+                    info3: input3Box.value,
+                    info4: input4Box.value,
+                    info5: input5Box.value,
+                    info6: input6Box.value,
+                    info7: input7Box.value,
+                    info8: input8Box.value,
+                    info9: input9Box.value,
+                    info10: input10Box.value,
+                    info11: input11Box.value,
+                    info12: input12Box.value,
+                    info13: input13Box.value,
+                    info14: input14Box.value,
+                    info15: input15Box.value,
+                    info16: input16Box.value,
+                    info17: input17Box.value,
+                    info18: input18Box.value,
+                    info19: input19Box.value,
+                    info20: input20Box.value,
+                    info21: input21Box.value,
+                    info22: input20Box.value,
+                    info23: input21Box.value
+                 };
+            
+                google.script.run.appendData(data);
+                input1Box.value = "";
+                input2Box.value = "";
+                input3Box.value = "";
+                input4Box.value = "";
+                input5Box.value = "";
+                input6Box.value = "";
+                input7Box.value = "";
+                input8Box.value = "";
+                input9Box.value = "";
+                input10Box.value = "";
+                input11Box.value = "";
+                input12Box.value = "";
+                input12Box.value = "";
+                input14Box.value = "";
+                input15Box.value = "";
+                input16Box.value = "";
+                input17Box.value = "";
+                input18Box.value = "";
+                input19Box.value = "";
+                input20Box.value = "";
+                input21Box.value = "";
+                input22Box.value = "";
+                input23Box.value = "";
+               
+             
+        } //close addrecord
+      
+        
+      </script>
+    </body>
+  </html>
