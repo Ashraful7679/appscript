@@ -11,14 +11,15 @@
     </head>
 
     <body>
-
+  
      <div class="container">
      
        <div class="row">
        <div class="input-field col s6">
-          <input disabled id="input0" type="text" class="validate">
-          <label for="input0">Amount</label>
+          <input id="input0" type="text" class="validate">
+          <label for="input0"></label>
         </div>
+        <button id="btn1">Reload</button>
         <div class="input-field col s6">
           <input id="input1" type="text" class="validate">
           <label for="input1">Job No.</label>
@@ -113,10 +114,23 @@
      
      </div>
      
-     
+     <script>
+      var initVal = <?= initialValue ?>;
+        document.getElementById("input0").value = initVal;
+         document.getElementById("btn1").addEventListener("click",function(){
+         google.script.run.withSuccessHandler(showValue).getNewValue();
+         
+         });
+         
+         function showValue(myValue){
+         document.getElementById("input0").value = myValue;
+         
+         };
+     </script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
+       
         var input1Box = document.getElementById("input1");
         var input2Box = document.getElementById("input2");
         var input3Box = document.getElementById("input3");
